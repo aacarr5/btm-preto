@@ -1,7 +1,10 @@
 require 'test_helper'
 
-class WelcomeControllerTest < ActionController::TestCase
-  test "the truth" do
-    assert true
+RSpec.describe WelcomeController, :type => :controller do
+  describe "GET index" do
+    it "has a 200 status code" do
+      get :index
+      expect(response.status).to eq(200)
+    end
   end
 end
